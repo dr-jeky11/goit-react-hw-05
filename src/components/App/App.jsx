@@ -1,27 +1,46 @@
-import userData from '../../userData.json'
-import friends from '../../friends.json'
-import transactions from '../../transactions.json'
+import { lazy, Suspense } from "react";
+import { Route, Routes } from "react-router-dom";
 
-import Profile from '../Profile/Profile';
-import FriendList from '../FriendList/FriendList';
-import TransactionHistory from '../TransactionHistory/TransactionHistory'
+import { Toaster } from "react-hot-toast";
 
-const App = () => {
+import Navigation from "../Navigation/Navigation";
+import Footer from "../Footer/Footer";
+import Loader from "../Loader/Loader";
+import MovieReviews from "../MovieReviews/MovieReviews";
+const LogInPage = lazy(() => import("../../pages/LogInPage/LogInPage"));
+
+const NotFoundPage = lazy(() =>
+  import("../../pages/NotFoundPage/NotFoundPage")
+);
+const HomePage = lazy(() => import("../../pages/HomePage/HomePage"));
+const MovieDetailsPage = lazy(() =>
+  import("../../pages/MovieDetailsPage/MovieDetailsPage")
+);
+const MovieCast = lazy(() => import("../MovieCast/MovieCast"));
+const MoviesPage = lazy(() => import("../../pages/MoviesPage/MoviesPage"));
+
+import s from "./App.module.css";
+
+export default function App() {
   return (
-    <>
-      <Profile
-        name={userData.username}
-        tag={userData.tag}
-        location={userData.location}
-        image={userData.avatar}
-        stats={userData.stats}
-      />
+    <div className={s.main}>
+      <Navigation />
 
-      <FriendList friends={friends} />
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/movies" element={<MoviesPage />} />
+          <Route path="/movies/:movieId" element={<MovieDetailsPage />}>
+            <Route path="cast" element={<MovieCast />} />
+            <Route path="reviews" element={<MovieReviews />} />
+          </Route>
+          <Route path="/profile" element={<LogInPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
+      </Suspense>
+      <Footer />
 
-      <TransactionHistory items={transactions} />
-    </>
+      <Toaster containerStyle={{ top: 50 }} reverseOrder={false} />
+    </div>
   );
-};
-
-export default App;
+}
