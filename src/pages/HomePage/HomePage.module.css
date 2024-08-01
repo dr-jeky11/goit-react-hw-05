@@ -1,0 +1,18 @@
+.main {
+  max-width: 1584px;
+  margin: 0 auto;
+  padding: 0 72px;
+}
+.section {
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1584px;
+  margin: 0 auto;
+  padding: 0 72px;
+}
+
+.listWrapper {
+  margin-bottom: 40px;
+}
