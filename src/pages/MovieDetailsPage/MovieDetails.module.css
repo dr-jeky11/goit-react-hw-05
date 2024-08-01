@@ -1,0 +1,146 @@
+.section {
+  padding: 50px 0;
+}
+
+.container {
+  max-width: 1584px;
+  margin: 0 auto;
+  padding: 0 72px;
+  position: relative;
+}
+
+.mainPage {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.image {
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 48px;
+  margin-bottom: 40px;
+  max-width: 590px;
+}
+
+.subtitle {
+  font-size: 18px;
+}
+.subtitle:first-of-type {
+  margin-bottom: 8px;
+}
+
+.homepageLink {
+  color: whitesmoke;
+  font-weight: 600;
+  text-align: center;
+
+  background-color: rgb(154, 0, 0);
+  max-width: 150px;
+  border-radius: 4px;
+  padding: 4px 16px;
+  box-shadow: 2px 2px 4px #444343;
+
+  margin-bottom: 40px;
+
+  transition: box-shadow 250ms ease-in-out;
+}
+
+.genresDetails,
+.countryDetails {
+  display: flex;
+  gap: 55px;
+  margin-bottom: 8px;
+}
+
+.countryDetails {
+  gap: 50px;
+}
+
+.genresList,
+.countryList {
+  display: flex;
+  gap: 5px;
+}
+
+.genreItem,
+.countryItem {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.genreItem:not(:last-of-type):after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: rgb(154, 0, 0);
+  display: block;
+}
+
+.genreText {
+  text-transform: capitalize;
+}
+
+.countryItem:not(:last-of-type):after {
+  content: "&";
+}
+
+.language {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 8px;
+}
+
+.duration {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 8px;
+}
+
+.vote {
+  display: flex;
+  gap: 80px;
+  margin-bottom: 8px;
+}
+
+.descriptionWrapper {
+  max-width: 590px;
+  margin-bottom: 20px;
+
+  display: flex;
+  gap: 15px;
+}
+
+.movieSubtitle {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.additionalInfo {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+}
+
+.navLink {
+  color: black;
+  font-weight: 700;
+  font-size: 18px;
+
+  transition: text-decoration 250ms ease-in-out, color 250ms ease-in-out;
+}
+
+.navLink:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+
+.activeNavLink {
+  color: rgb(154, 0, 0);
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-decoration-color: rgb(154, 0, 0);
+}
