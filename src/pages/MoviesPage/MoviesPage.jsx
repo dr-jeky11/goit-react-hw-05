@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getMovieByName } from "../../moviesAPI/movies-api";
+import { getMovieByName } from "../../moviesApi/movies-api";
 
 import SearchForm from "../../components/SearchForm/SearchForm";
 import MovieList from "../../components/MovieList/MovieList";
@@ -8,7 +8,7 @@ import Loader from "../../components/Loader/Loader";
 
 import s from "./MoviesPage.module.css";
 import { useSearchParams } from "react-router-dom";
-import LoadMoreBtn from "../../components/LoadMoreBtnMoreBtn/LoadMoreBtn";
+import LoadMoreBtn from "../../components/LoadMoreBtn/LoadMoreBtn";
 
 export default function MoviesPage() {
   const [moviesList, setMoviesList] = useState([]);

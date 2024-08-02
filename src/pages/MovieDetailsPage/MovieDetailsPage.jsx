@@ -1,14 +1,14 @@
 import { Suspense, useEffect, useRef, useState } from "react";
 import { NavLink, Outlet, useLocation, useParams } from "react-router-dom";
 
-import { getMovieById } from "../../moviesAPI/movies-api";
+import { getMovieById } from "../../moviesApi/movies-api";
 import { createPosterUrl } from "../../helpers/createImageUrl";
 
 import Loader from "../../components/Loader/Loader";
 import Error from "../../components/Error/Error";
 import BackToButton from "../../components/BackToButton/BackToButton";
 
-import s from "./MovieDetailsPage.module.css";
+import s from "../MovieDetailsPage/MovieDetails.module.css";
 import clsx from "clsx";
 import SimilarMovies from "../../components/SimilarMovies/SimilarMovies";
 
