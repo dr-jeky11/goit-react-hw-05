@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { getCastInfo } from "../../moviesAPI/movies-api";
+import { getCastInfo } from "../../moviesApi/movies-api.js";
 import { createActorUrl } from "../../helpers/createImageUrl.js";
 
 import s from "./MovieCast.module.css";

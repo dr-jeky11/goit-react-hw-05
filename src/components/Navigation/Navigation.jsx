@@ -7,7 +7,7 @@ import clsx from "clsx";
 import Logo from "../Logo/Logo";
 
 const createnavLinkClass = ({ isActive }) => {
-  return clsx(css.link, isActive && css.isActive);
+  return clsx(s.link, isActive && s.isActive);
 };
 
 export default function Navigation() {

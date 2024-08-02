@@ -13,7 +13,7 @@ import clsx from "clsx";
 import SimilarMovies from "../../components/SimilarMovies/SimilarMovies";
 
 const createNalLinkClass = ({ isActive }) => {
-  return clsx(css.navLink, isActive && css.activeNavLink);
+  return clsx(s.navLink, isActive && s.activeNavLink);
 };
 
 const timeFormat = (totalMinutes) => {
@@ -79,7 +79,7 @@ export default function MovieDetailsPage() {
                   <ul className={s.genresList}>
                     {movie.genres.map((genre) => {
                       return (
-                        <li key={genre.id} className={css.genreItem}>
+                        <li key={genre.id} className={s.genreItem}>
                           <span className={s.itemText}>{genre.name}</span>
                         </li>
                       );
@@ -92,7 +92,7 @@ export default function MovieDetailsPage() {
                   <ul className={s.countryList}>
                     {movie.origin_country.map((country) => {
                       return (
-                        <li key={country} className={css.countryItem}>
+                        <li key={country} className={s.countryItem}>
                           <span className={s.itemText}>{country}</span>
                         </li>
                       );

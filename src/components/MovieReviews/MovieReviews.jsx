@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
-import { getReviews } from "../../moviesAPI/movies-api";
+import { getReviews } from "../../moviesApi/movies-api";
 
 import Error from "../Error/Error";
 import LoadMoreBtn from "../LoadMoreBtn/LoadMoreBtn";
 
-import s from "./MoviesReviews.module.css";
+import s from "../MovieReviews/MovieReviews.module.css";
 import Loader from "../Loader/Loader";
 
 export default function MovieReviews() {
