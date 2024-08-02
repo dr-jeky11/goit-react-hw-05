@@ -1,4 +1,4 @@
-import s from "./LoadMoreBtn.module.css";
+import s from "../LoadMoreBtn/LoadMoreBtn.module.css";
 
 export default function LoadMoreBtn({ onLoadMore }) {
   return (

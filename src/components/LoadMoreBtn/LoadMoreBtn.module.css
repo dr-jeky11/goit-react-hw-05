@@ -2,7 +2,7 @@
   display: block;
   max-width: 150px;
   margin: 0 auto;
-
+  font-size: 20px;
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -10,5 +10,5 @@
 }
 .button:hover {
   box-shadow: #fff 0px 0px 5px, #fff 0px 0px 10px, #fff 0px 0px 15px,
-    #ff2d95 0px 0px 20px, #ff2d95 0px 0px 30px, #ff2d95 0px 0px 40px;
+    #2dff81 0px 0px 20px, #2dff81 0px 0px 30px, #2dff81 0px 0px 40px;
 }
