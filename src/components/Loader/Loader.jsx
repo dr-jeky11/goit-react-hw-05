@@ -7,7 +7,7 @@ const customStyles = {
 export default function Loader() {
   return (
     <>
-      <PacmanLoader color="green" cssOverride={customStyles} />
+      <PacmanLoader color="#94c507" cssOverride={customStyles} />
     </>
   );
 }

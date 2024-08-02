@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import Logo from "../Logo/Logo";
-
 import s from "./Footer.module.css";
 
 export default function Footer() {
@@ -11,7 +10,7 @@ export default function Footer() {
           <Logo />
         </Link>
         <p className={s.rights}>
-          &copy; 2024 FindYourMovie All rights are reserverd.
+          &copy; 2024 FindYourMovie All rights are reserved.
         </p>
       </div>
     </footer>
